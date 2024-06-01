@@ -37,6 +37,16 @@
 #define TH_FUN LT(FUN, KC_DEL) 
 #define TH_MOU LT(MOU, KC_SPC) 
 
+enum custom_keycodes {
+    BASE = SAFE_RANGE,
+    NAV,
+    NUM,
+    SYM,
+    MED,
+    FUN,
+    MOU,
+};
+
 enum layer_number {
     _BASE = 0,
     _NAV,
@@ -67,8 +77,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_BASE] = LAYOUT(
   _______,  _______, _______, _______, _______, _______,                             _______, _______, _______, _______, _______, _______,
-  _______,  KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   ,                             KC_J   , KC_L   , KC_U   , KC_I   , KC_SCLN, _______,
-  _______,  HO_A   , HO_R   , HO_S   , HO_T   , KC_G   ,                             KC_M   , HO_N   , HO_E   , HO_Y   , HC_O   , _______,
+  _______,  KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   ,                             KC_J   , KC_L   , KC_U   , KC_Y   , KC_SCLN, _______,
+  _______,  HO_A   , HO_R   , HO_S   , HO_T   , KC_G   ,                             KC_M   , HO_N   , HO_E   , HO_I   , HO_O   , _______,
   _______,  KC_X   , KC_C   , KC_D   , KC_V   , KC_Z   , _______,           _______, KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, _______,
                               _______, TH_MED , TH_NAV , TH_MOU ,           TH_SYM , TH_NUM , TH_FUN , _______
   ),
@@ -107,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   */
   [_MED] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                       _______, _______          , _______          , _______, _______, _______,
-  _______, KC_BOOT, _______, _______, _______, _______,                       _______, _______          , _______          , _______, _______, _______,
+  _______, QK_BOOT, _______, _______, _______, _______,                       _______, _______          , _______          , _______, _______, _______,
   _______, _______, _______, _______, _______, _______,                       KC_MPRV, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP  , KC_MNXT, _______, _______,
   _______, _______, _______, _______, _______, _______, _______,     _______, _______, _______          , _______          , _______, _______, _______,
                               _______, _______, _______, _______,     KC_MSTP, KC_MPLY, KC_KB_MUTE       , _______
